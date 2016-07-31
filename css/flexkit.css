@@ -91,9 +91,9 @@
   box-shadow: 0 0 0 transparent;
 }
 .smoke-base .dialog.primary .dialog-inner {
-  color: #385e2c;
-  border-color: #9bca8c;
-  background-color: #d7ead1;
+  color: #1c3f11;
+  border-color: #78a46a;
+  background-color: #c9dbc4;
 }
 .smoke-base .dialog.success .dialog-inner {
   color: #2a6a2c;
@@ -140,27 +140,27 @@
 }
 .smoke-base .dialog-buttons button {
   font-size: 12px;
-  color: #ffffff;
+  color: #FFF;
   border-color: #189b1a;
   background-color: #4fc752;
 }
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #126f13;
   background-color: #37ac3a;
 }
 .smoke-base .dialog-buttons button.cancel {
   margin-right: .5em;
-  color: #ffffff;
+  color: #FFF;
   border-color: #e62321;
   background-color: #f25f5c;
 }
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #be1816;
   background-color: #ee312d;
 }
@@ -203,7 +203,7 @@
   height: 18px;
 }
 .ui-accordion:not(#cpanelul) .ui-accordion-content {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e2e2e2;
   border-top: none;
   margin-top: 0;
@@ -238,7 +238,7 @@
   background: #292929;
   white-space: nowrap;
   list-style: none;
-  color: #ffffff;
+  color: #fff;
   font-size: 22px;
   border-bottom-width: 0;
   border-top-width: 0;
@@ -281,18 +281,18 @@
   cursor: pointer;
   background: #292929;
   border-color: #888888;
-  color: #ffffff;
+  color: #fff;
 }
 .ui-tabs .ui-tabs-nav li:hover ul {
   display: block;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
-  background: #69af52;
+  background: #34761f;
   position: relative;
   padding-bottom: 1px;
   margin-bottom: -1px;
-  border-color: #69af52;
-  color: #ffffff;
+  border-color: #34761f;
+  color: #fff;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
   cursor: default;
@@ -305,9 +305,9 @@
 .ui-tabs .ui-tabs-panel {
   position: relative;
   z-index: 0;
-  border-top: 1px solid #69af52;
+  border-top: 1px solid #34761f;
   overflow: hidden;
-  background: #ffffff;
+  background: #fff;
   padding: 8px 0;
 }
 .ui-tabs.vertical > .ui-tabs-nav {
@@ -326,32 +326,32 @@
   border-left-width: 3px;
 }
 .ui-tabs.vertical > .ui-tabs-nav li.ui-tabs-active {
-  border-right-color: #ffffff;
+  border-right-color: #fff;
 }
 .ui-tabs.vertical > .ui-tabs-panel {
   clear: none;
 }
 .ui-tabs.blocks {
-  border: 3px solid #69af52;
+  border: 3px solid #34761f;
 }
 .ui-tabs.blocks > .ui-tabs-nav {
-  border-bottom: 3px solid #69af52;
+  border-bottom: 3px solid #34761f;
 }
 .ui-tabs.blocks > .ui-tabs-nav li {
   margin: 0;
   padding: 0;
   border: none;
-  color: #69af52;
+  color: #34761f;
 }
 .ui-tabs.blocks > .ui-tabs-nav li + li {
-  border-left: 3px solid #69af52;
+  border-left: 3px solid #34761f;
 }
 .ui-tabs.blocks > .ui-tabs-nav li:hover {
-  background: #7eba6a;
+  background: #409226;
   color: #FFFFFF;
 }
 .ui-tabs.blocks > .ui-tabs-nav .ui-tabs-active {
-  background: #69af52;
+  background: #34761f;
   color: #FFFFFF;
 }
 .ui-tabs.blocks > .ui-tabs-panel {
@@ -366,10 +366,10 @@
   border: none;
 }
 .ui-tabs.blocks.vertical > .ui-tabs-nav li + li {
-  border-top: 3px solid #69af52;
+  border-top: 3px solid #34761f;
 }
 .ui-tabs.blocks.vertical > .ui-tabs-panel {
-  border-left: 3px solid #69af52;
+  border-left: 3px solid #34761f;
 }
 .ui-tabs h3 {
   font-size: 31px;
@@ -384,8 +384,8 @@
   padding: 0;
   border-width: 0;
   border-style: solid;
-  border-color: #5e9e49;
-  background-color: #ffffff;
+  border-color: #2b621a;
+  background-color: #fff;
   max-width: 90%;
   color: inherit;
   box-shadow: 4px 4px 4px #222222;
@@ -404,8 +404,8 @@
 }
 .ui-dialog .ui-dialog-titlebar {
   font-size: 1.25em;
-  background: #69af52;
-  color: #ffffff;
+  background: #34761f;
+  color: #FFF;
   padding: 10px 16px;
   position: relative;
   line-height: 1.5;
@@ -426,7 +426,7 @@
   margin: auto;
   padding: 10px;
   background: transparent;
-  color: #ffffff;
+  color: #FFF;
   box-sizing: content-box;
   width: 18px;
   height: 18px;
@@ -579,8 +579,8 @@
   display: none;
   padding: 0;
   width: 210px;
-  border: 1px solid #dddddd;
-  background: #ffffff;
+  border: 1px solid #DDD;
+  background: #fff;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 .ui-datepicker .ui-datepicker-header {
@@ -676,8 +676,8 @@
 }
 .ui-datepicker .ui-datepicker-calendar tbody td {
   font-size: 0.75em;
-  border-right: 1px solid #dddddd;
-  border-top: 1px solid #dddddd;
+  border-right: 1px solid #DDD;
+  border-top: 1px solid #DDD;
   line-height: 30px;
 }
 .ui-datepicker .ui-datepicker-calendar tbody td a,
@@ -691,7 +691,7 @@
   border: none;
 }
 .ui-datepicker .ui-datepicker-calendar tbody td a:hover {
-  background: #d7ead1;
+  background: #c9dbc4;
 }
 .ui-datepicker .ui-datepicker-calendar tbody td.ui-state-disabled {
   color: #eeeeee;
@@ -704,8 +704,8 @@
   background: #bbbbbb;
 }
 .ui-datepicker .ui-datepicker-calendar tbody td.ui-datepicker-today a {
-  color: #ffffff;
-  background: #69af52;
+  color: #FFF;
+  background: #34761f;
 }
 .ui-autocomplete {
   padding: 0;
@@ -715,7 +715,7 @@
   font-size: 18px;
   max-height: 864px;
   border: 1px solid #bbbbbb;
-  background: #ffffff;
+  background: #fff;
   color: #3d3d3d;
   list-style: none;
 }
@@ -738,8 +738,8 @@
   z-index: 9999;
   padding: 4px 8px;
   max-width: 300px;
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
 }
 .ui-tooltip .ui-tooltip-content {
   font-size: .85em;
@@ -758,28 +758,28 @@
   right: 0;
   bottom: 100%;
   border-top-width: 0;
-  border-bottom-color: #000000;
+  border-bottom-color: #000;
 }
 .ui-tooltip .arrow.bottom {
   left: 0;
   right: 0;
   top: 100%;
   border-bottom-width: 0;
-  border-top-color: #000000;
+  border-top-color: #000;
 }
 .ui-tooltip .arrow.left {
   top: 0;
   bottom: 0;
   right: 100%;
   border-left-width: 0;
-  border-right-color: #000000;
+  border-right-color: #000;
 }
 .ui-tooltip .arrow.right {
   top: 0;
   bottom: 0;
   left: 100%;
   border-right-width: 0;
-  border-left-color: #000000;
+  border-left-color: #000;
 }
 .ui-tooltip.success {
   background: #d0f0d1;
@@ -855,7 +855,7 @@
   position: absolute;
   z-index: 2;
   cursor: pointer;
-  background: #355829;
+  background: #1a3b10;
   width: 1.4em;
   height: 1.4em;
   border-radius: 2px;
@@ -865,7 +865,7 @@
   z-index: 1;
   display: block;
   border: 0;
-  background: #69af52;
+  background: #34761f;
 }
 .ui-slider .ui-slider-range.ui-slider-range-min {
   left: 0;
@@ -954,7 +954,7 @@
 }
 .ui-progressbar .ui-progressbar-value {
   height: 100%;
-  background: #69af52;
+  background: #34761f;
 }
 .ui-progressbar.success .ui-progressbar-value {
   background: #4fc752;
@@ -1039,9 +1039,9 @@
   color: #888888;
 }
 .paginator .page.selected {
-  background: #69af52;
-  color: #ffffff;
-  border-color: #69af52;
+  background: #34761f;
+  color: #FFF;
+  border-color: #34761f;
 }
 .paginator :first-child,
 .paginator :last-child {
@@ -1132,7 +1132,7 @@
 }
 .dataTables_paginate .paginate_button.current {
   font-weight: bold;
-  background: #b6e0a9;
+  background: #9cc88e;
   color: #fff;
 }
 .dataTables_paginate .paginate_button.first::before,
@@ -1182,7 +1182,7 @@
 }
 .text-line > * {
   margin: 0;
-  background: #ffffff;
+  background: #FFF;
   position: relative;
   z-index: 1;
   display: inline-block;
@@ -1200,6 +1200,36 @@
   margin: auto;
   height: 1px;
   background-color: #c4c4c4;
+}
+.parallax {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  height: 200px;
+  padding-top: 14%;
+  padding-bottom: 12%;
+}
+.parallax.take-from-widget,
+.parallax .take-from-widget {
+  position: relative;
+}
+.parallax.take-from-widget > img,
+.parallax .take-from-widget > img,
+.parallax.take-from-widget > ._lbox,
+.parallax .take-from-widget > ._lbox {
+  display: none;
+}
+.parallax.take-from-widget [data-url*="imageonly"],
+.parallax .take-from-widget [data-url*="imageonly"] {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 999;
+}
+.parallax.height-auto {
+  height: auto;
 }
 .responsive-ratio {
   position: relative;

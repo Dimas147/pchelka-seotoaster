@@ -1,75 +1,152 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
 
-        <!-- Header -->
-        <header class="container" role="banner">
-            <h1 class="logo grid_4" itemscope itemtype="http://schema.org/Organization">
-                <a href="{$website:url}" title="{$plugin:widcard:BizOrgName:notag}" itemprop="url">
-                    <img src="{$plugin:widcard:bizLogo:url}" alt="{$page:h1}" width="287" height="38" itemprop="logo">
-                    <span itemprop="name">{$plugin:widcard:BizOrgName:notag}</span>
-                </a>
-            </h1>
-            <div class="grid_8">
-                <div class="search" role="search">
-                    {$search:form}
-                </div>
-                <nav class="user-menu">
-                    {$featuredonly:user-menu:static}
-                </nav>
-                <!-- Flat Menu -->
-                <nav id="flat-menu" class="text-right">
-                    {$menu:flat}
-                </nav>
-            </div>
-        </header>
-        <!--Slider -->
-        {device:desktop}
-        <div class="slider cycle-slideshow d-visible"
-                data-cycle-slides=".slide"
-                data-cycle-fx="scrollHorz"
-                data-cycle-max-z="10"
-                data-cycle-timeout="7000"
-                data-cycle-next=".cycle-next"
-                data-cycle-prev=".cycle-prev"
-                >
-            {repeat:slider:key:2}
-            <div class="slide">
-                {$imageonly:slide_key:{$mobile:device:mobile=medium:tablet=large:desktop=1920}}
-                <div class="slide-description">
-                    {$content:slide_key}
-                </div>
-            </div>
-            {/repeat}
-            <span class="cycle-prev action-button icon-arrow-left7 m-hide"></span>
-            <span class="cycle-next action-button icon-arrow-right7 m-hide"></span>
+<!-- Header -->
+<header class="container" role="banner">
+    <h1 class="logo grid_4" itemscope itemtype="http://schema.org/Organization">
+        <a href="{$website:url}" title="{$plugin:widcard:BizOrgName:notag}" itemprop="url">
+            <img src="{$plugin:widcard:bizLogo:url}" alt="{$page:h1}" width="287" height="38" itemprop="logo">
+            <span itemprop="name">{$plugin:widcard:BizOrgName:notag}</span>
+        </a>
+    </h1>
+
+    <div class="grid_8">
+        <div class="search" role="search">
+            {$search:form}
         </div>
-        {/device}
-        <!-- Container -->
-        <div id="page" class="container index" role="main">
-            <!-- Content box -->
-            {repeat:Section box:key:1}
-            <section class="grid_12 text-center space">
-                <h2 class="text-line">
-                    <span>{$header:content_key}</span>
-                </h2>
-                {$content:content_key1}
+        <nav class="user-menu">
+            {$featuredonly:user-menu:static}
+        </nav>
+        <!-- Flat Menu -->
+        <nav id="flat-menu" class="text-right">
+            {$menu:flat}
+        </nav>
+    </div>
+</header>
+<!--Slider -->
+{device:desktop}
+<div class="slider cycle-slideshow d-visible"
+     data-cycle-slides=".slide"
+     data-cycle-fx="scrollHorz"
+     data-cycle-max-z="10"
+     data-cycle-timeout="0"
+     data-cycle-next=".cycle-next"
+     data-cycle-prev=".cycle-prev"
+        >
+    {repeat:slider:key:1}
+    <div class="slide">
+        {$imageonly:slide_key:{$mobile:device:mobile=medium:tablet=large:desktop=1920}}
+        <div class="slide-description">
+            <div class="container text-center">
+                {$content:slide_key}
+            </div>
+        </div>
+    </div>
+    {/repeat}
+    <span class="cycle-prev action-button icon-arrow-left7 m-hide"></span>
+    <span class="cycle-next action-button icon-arrow-right7 m-hide"></span>
+</div>
+{/device}
+<!-- Container -->
+<div id="page" class="index" role="main">
+    <!-- Content box -->
+    {repeat:Section box:key:1}
+    <article class="container">
+        <section class="grid_12 text-center space">
+            <h2 class="text-line">
+                <span>{$header:content_key}</span>
+            </h2>
+            {$content:content_key1}
+        </section>
+    </article>
+    {/repeat}
+
+    <div class="parallax take-from-widget height-auto m-hide space">
+        {$imageonly:parallax-1:1902}
+        <article class="container">
+            <section class="grid_12 mb0px text-center">
+                <h2>{$header:parallax-1}</h2>
+                {$textonly:parallax-1}
             </section>
-            {/repeat}
-        </div>
-        <!-- Footer -->
-        <!-- Include Footer template -->
-        {$template:_footer}
+        </article>
+    </div>
 
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
+    <article class="container">
+        <section class="grid_12 space">
+            <div class="grid_6 alpha">
+                <h2 class="text-line">
+                    <span>{$header:news-header}</span>
+                </h2>
+                {newslist:all-news}
+                <article class="news-item">
+                    {$news:actions}
+                    <time class="news-item-date small block mb10px" datetime="{$news:date:Y-m-d}">
+                        <i class="icon-calendar2 icon16"></i>
+                        {$news:date: M d, Y}
+                    </time>
+                    <a class="news-item-image text-center grid_2 alpha mb10px" href="{$news:url}">
+                        <img src="{$news:preview:crop:300x200}" alt="{$news:title:inline}"/>
+                    </a>
+                    <a class="h3 news-item-title large grid_10 omega mb10px" href="{$news:url}">{$news:title}</a>
 
-        <!-- Include scripts template -->
-        {$template:_scripts}
-        <script src="js/plugin/jquery.cycle2.min.js"></script>
-    </body>
+                    <p class="news-item-description grid_12 alpha omega mb10px">{$news:teaser}</p>
+
+                    <p class="news-item-tags small cl-both text-left mb0px">{$news:tags}</p>
+                </article>
+                {/newslist}
+            </div>
+            <div class="grid_6 omega">
+                <h2 class="text-line">
+                    <span>{$header:testimonials-header}</span>
+                </h2>
+                <ul class="list-testimonials">
+                    {repeat:list-testimonials:key:1}
+                    <li>
+                        <blockquote class="testimonial-container">
+                            <p class="testimonial-name h3">{$header:testimonial-name_key:static}</p>
+                            {$textonly:testimonial_key:static}
+                        </blockquote>
+                    </li>
+                    {/repeat}
+                </ul>
+            </div>
+        </section>
+    </article>
+
+    <div class="parallax take-from-widget height-auto m-hide space">
+        {$imageonly:parallax-2:1902}
+        <article class="container">
+            <section class="grid_12 mb0px text-center">
+                <h2>{$header:parallax-2}</h2>
+                {$textonly:parallax-2}
+            </section>
+        </article>
+    </div>
+
+    <article class="container">
+        <section class="grid_12 text-center space pb0px">
+            <h2 class="text-line">
+                <span>{$header:gallery}</span>
+            </h2>
+            {$content:gallery}
+        </section>
+    </article>
+
+</div>
+<!-- Footer -->
+<!-- Include Footer template -->
+{$template:_footer}
+
+<!-- Include mobile elements template -->
+{$template:_mobile elements}
+
+<!-- Include scripts template -->
+{$template:_scripts}
+<script src="js/plugin/jquery.cycle2.min.js"></script>
+</body>
 </html>

@@ -1,76 +1,80 @@
 .news-item when (@widget-news-list) {
-    border        : 1px solid #C4C4C4;
-    padding       : 1em;
-    margin-bottom : 2%;
-    .border-radius(4px);
+	border: 1px solid #C4C4C4;
+	padding: 1em;
+	margin-bottom: 2%;
+	.border-radius(4px);
 
-    .news-item-image {
-        img {
-            width : 100%;
-        }
-    }
+	.news-item-image {
+		img {
+			width: 100%;
+		}
+	}
 
-    .news-item-title {
-        text-decoration : none;
-        &.h3 {
-            line-height : 1.1;
-            margin-top  : 0;
-            font-size   : 1.7em;
-        }
-    }
+	.news-item-title {
+		text-decoration: none;
+		text-transform: capitalize;
+		&.h3 {
+			line-height: 1.1;
+			margin-top: 0;
+			font-size: 1.7em;
+		}
+	}
 
-    .newslog-admin-actions {
-        text-align : right;
-        a {
-        }
-    }
+	.newslog-admin-actions {
+		text-align: right;
+		a {
+		}
+	}
 
-    .news-item-date {
-        color : lighten(@text-color, 15%);
+	.news-item-date {
+		color: lighten(@text-color, 15%);
 
-        &::before {
-            top       : 2px;
-            font-size : 16px;
-            color     : @primary-bg;
-        }
-    }
+		&::before {
+			top: 2px;
+			font-size: 16px;
+			color: @primary-bg;
+		}
+	}
 
-    .news-item-description {
-    }
+	.news-item-description {
+		font-size: 15.75px;
+	}
 
-    .news-item-tags {
-        &:empty {
-            margin-bottom : 0;
-        }
+	.news-item-tags {
+		&:empty {
+			margin-bottom: 0;
+		}
 
-        a {
-            .link-color(@gray);
+		a {
+			.link-color(@gray);
 
-            & + a {
-                margin-left : 0.5em;
-            }
+			& + a {
+				margin-left: 0.5em;
+			}
 
-            &::before {
-                color        : @gray;
-                margin-right : 0.5em;
-            }
-        }
-    }
+			&::before {
+				color: @gray;
+				margin-right: 0.5em;
+			}
+		}
+	}
 
-    .newslog-tag-filter {
-        &::before {
-            content : "\e02f";
-        }
-    }
+	.newslog-tag-filter {
+		text-decoration: none;
+		&::before {
+			font-family: @font-family-icons;
+			content: "\e02f";
+		}
+	}
 }
 
 .news-img {
-    .border-radius(4px);
-    overflow: hidden;
-    img {
-        width : 100%;
-    }
-    & + h2{
-        margin-top: 0.5em;
-    }
+	.border-radius(4px);
+	overflow: hidden;
+	img {
+		width: 100%;
+	}
+	& + h2 {
+		margin-top: 0.5em;
+	}
 }

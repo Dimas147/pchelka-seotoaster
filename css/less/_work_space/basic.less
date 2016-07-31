@@ -1,8 +1,8 @@
 //	PAGE Style
 //==================================================
 body {
-    // custom scroll-bar
-    .scroll-bar();
+	// custom scroll-bar
+	.scroll-bar();
 }
 
 main {
@@ -14,89 +14,79 @@ main {
 //	HEADER Style
 //==================================================
 header {
-    padding    : 0.722em 0 0.5em;
-    background : @header-bg;
-    color      : @header-color;
+	padding: 0.722em 0 1em;
+	background: @header-bg;
+	color: @header-color;
 
-    // -- LOGO Style
-    .logo {
-        margin-top      : 0.5em;
-        line-height     : 1;
-        text-decoration : none;
-        a {
-            .inline-block(top);
-        }
-        img {
-            display : block;
-        }
-    }
-    .search {
-        float : right;
-    }
-    .user-menu {
-        overflow : hidden;
-    }
+	// -- LOGO Style
+	.logo {
+		margin: 0;
+		line-height: 1;
+		text-decoration: none;
+		a {
+			.inline-block(top);
+		}
+		img {
+			display: block;
+		}
+	}
+	.search {
+		float: right;
+	}
+	.user-menu {
+		overflow: hidden;
+	}
 }
 
 .user-menu {
-    margin-top : 0.15em;
-    overflow   : hidden;
-    text-align : right;
+	margin-top: 0.1em;
+	overflow: hidden;
+	text-align: right;
 
-    ul {
-        .inline-block();
-        margin     : 0;
-        list-style : none;
-    }
-    li {
-        float        : left;
-        margin-right : 1.1em;
+	ul {
+		.inline-block();
+		margin: 0;
+		list-style: none;
+	}
+	li {
+		float: left;
+		margin-right: 0.5em;
 
-        .page-title {
-            margin-bottom : 0;
-            font-size     : 0.85em;
-            font-family   : @font-family-text;
-            color         : @text-color;
-            &::before {
-                font-family             : @font-family-icons;
-                speak                   : none;
-                font-style              : normal;
-                font-weight             : normal;
-                text-transform          : none;
-                line-height             : 1;
-                position                : relative;
-                text-align              : center;
-                .inline-block();
-                -webkit-font-smoothing  : antialiased;
-                -moz-osx-font-smoothing : grayscale;
-                //
-                padding                 : 0.5em;
-                margin-right            : 0.25em;
-                .border-radius(50%);
-                color                   : #FFFFFF;
-                background-color        : @brand-primary;
-            }
-            &:hover {
-                text-decoration : underline;
-            }
-        }
-        a[title="My Account"] {
-            &::before {
-                content : "\e07b";
-            }
-        }
-        a[title="Registration"] {
-            &::before {
-                content : "\e006";
-            }
-        }
-        a[title="Checkout"] {
-            &::before {
-                content : "\e037";
+		.page-title {
+			.button();
+			text-align: center;
+			line-height: 30px;
+			height: 30px;
+			width: 30px;
+			font-size: 0;
+			&::before{
+				font-size: 15px;
+				font-family: @font-family-icons;
+			}
+		}
+		&:nth-child(1) {
+			a {
+				&::before {
+					content: "\e07b";
+				}
+			}
+		}
+		&:nth-child(2) {
+			a {
+				&::before {
+					content: "\e006";
+				}
+			}
+		}
+		&:nth-child(3) {
+			a {
+				&::before {
+					content: "\e037";
 
-            }
-        }
-    }
+				}
+			}
+		}
+	}
 }
 
 // -- NAV Style
@@ -104,11 +94,11 @@ nav {
 }
 
 .banner {
-    margin-bottom : 2.5em;
-    img {
-        max-height : 250px;
-        width      : auto;
-    }
+	margin-bottom: 2.5em;
+	img {
+		max-height: 250px;
+		width: auto;
+	}
 }
 
 //	CONTENT Style
@@ -120,132 +110,137 @@ section {
 }
 
 .space {
-    padding : 2em 0;
+	padding: 2em 0;
 }
 
 .apple-bg {
-    margin-top : 50px;
-    position   : relative;
-    text-align : center;
-    background : url("../images/apple-bg.png") 50% 0 no-repeat @brand-primary;
-    a:not(.tpopup) {
-        .inline-block();
-        margin          : 1.2em 0 0.5em;
-        font-family     : @font-family-headings;
-        text-shadow     : 1px 1px 2px #000000;
-        text-decoration : none;
-        font-size       : 2.25em;
-        color           : #FFFFFF;
-        font-weight     : normal;
-    }
-    &::before {
-        font-size   : 35px;
-        width       : 60px;
-        line-height : 60px;
-        left        : 50%;
-        margin-left : -30px;
-        top         : -30px;
-        text-align  : center;
-        background  : @primary-color;
-        position    : absolute;
-        font-family : @font-family-icons;
-        content     : "\e900";
-        .border-radius(50%);
-    }
+	margin-top: 50px;
+	position: relative;
+	text-align: center;
+	background: url("../images/apple-bg.png") 50% 0 no-repeat @brand-primary;
+	a:not(.tpopup) {
+		.inline-block();
+		margin: 1.2em 0 0.5em;
+		font-family: @font-family-headings;
+		text-shadow: 1px 1px 2px #000000;
+		text-decoration: none;
+		font-size: 2.25em;
+		color: #FFFFFF;
+		font-weight: normal;
+	}
+	&::before {
+		font-size: 35px;
+		width: 60px;
+		line-height: 60px;
+		left: 50%;
+		margin-left: -30px;
+		top: -30px;
+		text-align: center;
+		background: @primary-color;
+		position: absolute;
+		font-family: @font-family-icons;
+		content: "\e900";
+		.border-radius(50%);
+	}
 }
 
 //	SIDEBAR Style
 //==================================================
 aside {
-    .aside-box {
-        margin-bottom : 30px;
-    }
+	.aside-box {
+		margin-bottom: 30px;
+	}
 }
 
 //	FOOTER Style
 //==================================================
 .black-bg {
-    background-color : #000000;
+	background-color: #000000;
 }
 
 footer {
-    padding    : @padding-larger-vertical * 2 0;
-    background : @footer-bg;
-    color      : @footer-color;
-    //font-size  : @font-size-small;
+	padding: @padding-larger-vertical * 2 0;
+	background: @footer-bg;
+	color: @footer-color;
+	//font-size  : @font-size-small;
 }
 
 //	Button to scroll top
 //==================================================
 #go-top {
-    .button-color(#FFFFFF; fade(#000000, 50%); fade(#000000, 50%); @primary-color; @primary-bg; @primary-bg);
+	.button-color(#FFFFFF; fade(#000000, 50%); fade(#000000, 50%); @primary-color; @primary-bg; @primary-bg);
 }
 
-.contact{
-    .h3{
-        font-size: 1.4em;
-    }
+.contact {
+	.h3 {
+		font-size: 1.4em;
+	}
 }
 
-.contact-details{
-    font-weight: 300;
-    strong{
-        &::before{
-            color: @brand-primary;
-            margin-right: 5px;
-        }
-    }
+.contact-details {
+	font-weight: 300;
+	strong {
+		&::before {
+			color: @brand-primary;
+			margin-right: 5px;
+		}
+	}
 }
 
 .social-lines {
-    padding : 0;
+	padding: 0;
 
-    .item {
-        border     : 1px solid #c4c4c4;
-        overflow   : hidden;
-        background : @primary-color;
-        text-align : center;
-        font-size  : 0;
-        .border-radius(4px);
-    }
-    .title {
-        color            : @gray-darker;
-        //font-weight      : normal;
-        font-size        : 24px;
-        font-family      : @font-family-text;
-        background-color : #FAFAFA;
-        margin           : 0 0 0;
-        padding          : 5px 0;
-        border-bottom    : 1px solid @gray-lighter;
-    }
+	.item {
+		border: 1px solid #c4c4c4;
+		overflow: hidden;
+		background: @primary-color;
+		text-align: center;
+		font-size: 0;
+		.border-radius(4px);
+	}
+	.title {
+		color: @gray-darker;
+		//font-weight      : normal;
+		font-size: 24px;
+		font-family: @font-family-text;
+		background-color: #FAFAFA;
+		margin: 0 0 0;
+		padding: 5px 0;
+		border-bottom: 1px solid @gray-lighter;
+	}
 
-    @media only screen and (max-width : @responsive-size-tablet) {
-        .title {
-            margin-bottom : 10px;
-        }
+	@media only screen and (max-width: @responsive-size-tablet) {
+		.title {
+			margin-bottom: 10px;
+		}
 
-        .item {
-            padding-bottom : 10px;
-            &:nth-child(1) {
-                iframe {
-                    width  : 500px !important;
-                    border : 1px solid #E9EBEE !important;
-                }
-            }
-        }
-    }
-    @media only screen and (max-width : @responsive-size-mobile) {
-        .title {
-            margin : 0;
-        }
+		.item {
+			padding-bottom: 10px;
+			&:nth-child(1) {
+				iframe {
+					width: 500px !important;
+					border: 1px solid #E9EBEE !important;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: @responsive-size-mobile) {
+		.title {
+			margin: 0;
+		}
 
-        .item {
-            padding : 0;
-            &:nth-child(1) {
-                iframe {
-                    border : none !important;
-                }
-            }
-        }
-    }
+		.item {
+			padding: 0;
+			&:nth-child(1) {
+				iframe {
+					border: none !important;
+				}
+			}
+		}
+	}
+}
+
+.footer-container{
+	margin-top: 50px;
+	border-top: 1px solid #c4c4c4;
 }

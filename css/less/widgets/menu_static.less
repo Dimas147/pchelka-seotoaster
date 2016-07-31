@@ -1,7 +1,11 @@
 #flat-menu{
-    margin-top    : 1em;
+    margin-top    : 1.5em;
     margin-bottom : 0.5em;
     clear         : both;
+    footer &{
+        margin: 0;
+        line-height: 2.3em;
+    }
 }
 .static_menu when (@menu-static){
     .inline-block();
@@ -25,30 +29,6 @@
                 color : @brand-primary;
             }
             span{
-            }
-        }
-    }
-
-    footer &{
-        margin-bottom : 1em;
-        li{
-            margin        : 0;
-            padding-right : 0.5em;
-            line-height   : 1;
-
-            & + li{
-                padding-left : 0.5em;
-                border-left  : 1px solid @brand-primary;
-            }
-
-            a{
-                font-weight : 400;
-                color       : @brand-primary;
-                &.current, &:hover{
-                    color : #fff;
-                }
-                span{
-                }
             }
         }
     }

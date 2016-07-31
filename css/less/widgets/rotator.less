@@ -39,10 +39,6 @@
             top      : 10px;
             left     : 10px;
         }
-        > img{
-            max-height : 428px;
-            width      : auto;
-        }
     }
 
     // -- Pager
@@ -85,6 +81,7 @@
         cursor     : pointer;
         margin-top : -@slider-button-size / 2 - @padding-large-vertical;
         padding    : @padding-large-vertical;
+        .border-radius(4px);
         .box-sizing(content-box);
         .icon-size(@slider-button-size; true);
         .transition();
@@ -125,4 +122,15 @@
         }
 
     }
+
+	.slide-description {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		padding: @padding-large-vertical @padding-large-horizontal;
+		color: #FFF;
+		.rgba(#000; 0.5);
+		.translate(0, -50%);
+	}
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
+
+<!-- Header -->
+{$template:_header}
+<!-- Container -->
+<div id="page" class="container index" role="main">
+    <h1 class="grid_12 h2 text-line" role="heading"><span>{$page:h1}</span></h1>
+    <!-- Content box -->
+    <section class="grid_12" role="main">
+        {repeat:Section box:key:1}
+        <article>
+            <h2>{$header:content_key}</h2>
+            {$content:content_key1}
+            {$content:content_key2}
+        </article>
+        {/repeat}
+    </section>
+</div>
+<!-- Footer -->
+<!-- Include Footer template -->
+{$template:_footer}
+
+<!-- Include mobile elements template -->
+{$template:_mobile elements}
+
+<!-- Include scripts template -->
+{$template:_scripts}
+<script src="js/plugin/jquery.cycle2.min.js"></script>
+</body>
+</html>

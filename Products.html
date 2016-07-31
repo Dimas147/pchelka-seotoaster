@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+    
+        <!-- Include header template -->
+        {$template:_header}
+
+        <!-- Container -->
+        <div id="page" class="container">
+
+            <!-- Content box -->
+            <ar class="grid_9 push_3" role="main">
+                <h1 role="heading">{$page:h1}</h1>
+                {repeat:Section box:key:1}
+                <section>
+                    <h2>{$header:content_key}</h2>
+                    {$content:content_key1}
+                    {$content:content_key2}
+                </section>
+                {/repeat}
+            </ar>
+            
+            <!-- Left box -->
+            <aside class="grid_3 pull_9" role="complementary">
+                <div class="h3">{$header:left_key:static}</div>
+                <!-- Main Menu -->
+                <nav id="main-menu" class="d-visible" role="navigation">
+                    {$menu:main:_main menu left}
+                </nav>
+            </aside>
+        </div>
+        <!-- Footer -->
+        <!-- Include Footer template -->
+        {$template:_footer}
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
+        <!-- Include scripts template -->
+        {$template:_scripts}
+    </body>
+</html>

@@ -1,0 +1,66 @@
+.captcha when (@form-captcha) {
+
+    .captcha_image {
+        font-size: 0;
+        width: auto !important;
+        height: auto !important;
+        margin-bottom: 12px;
+        padding: 10px 20px;
+        text-align: center;
+        line-height: 1;
+        border: 1px solid #bbbbbb;
+        .border-radius(4px);
+        a{
+            font-size: 25px;
+        }
+    }
+
+    label, input {
+
+    }
+
+    .recaptcha_links {
+        margin-top: 10px;
+        a {
+            .button();
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 0;
+            color: transparent;
+            .border-radius(50%);
+            &::before {
+                font-size: 21px;
+                color: @primary-color;
+                font-family: @font-family-icons;
+            }
+            &[href="javascript:Recaptcha.reload();"] {
+                &::before {
+                    content: "\e09f";
+                }
+            }
+            &.recaptcha_only_if_image {
+                &::before {
+                    content : "\e019";
+                }
+            }
+            &.recaptcha_only_if_audio{
+                &::before{
+                    content: "\e00b";
+                }
+            }
+            &.recaptcha_help {
+                &::before {
+                    content: "\e042";
+                }
+            }
+            &:hover{
+                color: transparent;
+                &::before{
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+}

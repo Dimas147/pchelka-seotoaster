@@ -1,0 +1,95 @@
+// Product Style
+.product {
+
+    .edit-product-btn {
+        position         : absolute;
+        left             : 0;
+        top              : 0;
+        background-color : @primary-bg;
+        color            : @primary-color;
+        padding          : 5px;
+        z-index          : 2;
+    }
+    .product-image {
+        display : block;
+
+        img {
+            width : 100%;
+        }
+    }
+    .product-name {
+    }
+
+    .product-price {
+        font-size   : 2em;
+        line-height : 1;
+        font-family : @font-family-headings;
+        color       : @brand-primary;
+    }
+
+    .product-info {
+        .title {
+            font-weight : bold;
+        }
+    }
+
+    .product-description-short {
+    }
+
+    .product-description-full {
+    }
+
+    .product-options-listing {
+        margin-bottom : 1em;
+        overflow      : hidden;
+
+        .product-option {
+            overflow      : hidden;
+            margin-bottom : 1em;
+
+            & > label {
+                font-weight : bold;
+                width       : auto;
+                display     : inline;
+            }
+
+            & > div label {
+                cursor       : pointer;
+                float        : left;
+                font-size    : 12px;
+                margin-right : 1%;
+                width        : 27%;
+            }
+
+            select {
+                padding : 2px;
+                width   : auto;
+            }
+        }
+    }
+
+    .tcart-add {
+        .button();
+        .user-select();
+        .box-shadow(none; @input-shadow-focus);
+        display : block;
+    }
+}
+
+.product-img-container{
+    position: relative;
+    .starrating {
+        text-align : center;
+        position   : absolute;
+        left       : 0;
+        top        : 0;
+        right      : 0;
+        z-index    : 1;
+        .r-head-text, .total-review {
+            display : none;
+        }
+        .stars-container {
+            width : auto !important;
+        }
+    }
+}

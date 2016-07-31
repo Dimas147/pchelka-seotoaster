@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
+
+<!-- Header -->
+{$template:_header}
+<!-- Container -->
+<div id="page" class="container index" role="main">
+    <h1 class="grid_12 h2 text-line" role="heading"><span>{$page:h1}</span></h1>
+    <!-- Content box -->
+    <section class="grid_12 contact" role="main">
+        <div class="grid_6 alpha">
+            <h2 class="h3">{$header:contact1}</h2>
+            <div class="contact-details">
+                <p class="clearfix">
+                    <strong class="icon-location2 grid_4 alpha">Address: </strong>
+                    <span class="grid_8">{$plugin:widcard:BizAddress1}  {$plugin:widcard:BizAddress2}, {$plugin:widcard:BizCity}, {$plugin:widcard:BizState} {$plugin:widcard:BizZip}</span>
+                </p>
+                <p class="clearfix">
+                    <strong class="icon-phone grid_4 alpha">Phone: </strong>
+                    <span class="grid_8">{$plugin:widcard:BizTelephone}</span>
+                </p>
+                <p class="clearfix">
+                    <strong class="icon-mail grid_4 alpha">Email: </strong>
+                    <span class="grid_8"><a href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail}</a></span>
+                </p>
+            </div>
+        </div>
+        <div class="grid_6 omega">
+            <h2 class="h3">{$header:contact2}</h2>
+            {$form:contact-form:recaptcha:custom:Submit}
+        </div>
+        <!--{_$plugin:gmaps:bizlocation:1200:300}-->
+    </section>
+</div>
+<!-- Footer -->
+<!-- Include Footer template -->
+{$template:_footer}
+
+<!-- Include mobile elements template -->
+{$template:_mobile elements}
+
+<!-- Include scripts template -->
+{$template:_scripts}
+<script src="js/plugin/jquery.cycle2.min.js"></script>
+</body>
+</html>

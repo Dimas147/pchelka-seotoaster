@@ -1,0 +1,46 @@
+//	Search form
+//==================================================
+#search-form when (@widget-search) {
+    position  : relative;
+    font-size : 0.833em;
+
+    p:last-child::after, [type="submit"] {
+        background  : transparent;
+        font-size   : 0;
+        position    : absolute;
+        right       : 2px;
+        top         : 2px;
+        height      : 30px;
+        line-height : 30px;
+        width       : 30px;
+        text-align  : center;
+        .border-radius(50%);
+    }
+
+    p {
+        margin : 0;
+        .transition();
+        &:last-child {
+            &::after {
+                pointer-events : none;
+                font-size      : 15px;
+                color          : #000000;
+                font-family    : @font-family-icons;
+                content        : "\e077";
+            }
+            &:hover {
+                [type="submit"] {
+                    background : @brand-primary;
+                }
+                &::after {
+                    color : @primary-color;
+                }
+            }
+        }
+    }
+
+    [type="text"] {
+        padding : 0.4em 38px 0.4em 0.8em;
+        .border-radius(20px);
+    }
+}

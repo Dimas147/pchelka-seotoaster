@@ -1,0 +1,37 @@
+<div class="apple-bg">
+    {$content:pgf:static}
+</div>
+<div class="wrap black-bg">
+    <footer class="container" itemscope itemtype="http://schema.org/LocalBusiness" role="contentinfo">
+        <nav class="grid_6">
+            {$menu:flat}
+        </nav>
+        <div class="grid_6">
+            {$featuredonly:footer-menu:static}
+        </div>
+        <!--<div class="footer-box grid_3 t-grid_3">
+            <h3>{$header:footer2:static}</h3>
+            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">{$plugin:widcard:BizAddress1:notag}</span>
+                <span itemprop="addressLocality">{$plugin:widcard:BizCity:notag}</span>,
+                <span itemprop="postalCode">{$plugin:widcard:BizZip:notag}</span>
+                <span itemprop="addressRegion">{$plugin:widcard:BizState:notag}</span>
+                <meta itemprop="addressCountry" content="EN"/>
+            </address>
+        </div>
+        <div class="footer-box grid_3 t-grid_3">
+            <h3>{$header:footer4:static}</h3>
+            <p itemprop="telephone">{$plugin:widcard:BizTelephone:notag}</p>
+            <a href="mailto:{$plugin:widcard:BizEmail:notag}" itemprop="email">{$plugin:widcard:BizEmail:notag}</a>.
+            <a href="{$website:url}" itemprop="url">{$website:url}</a>
+        </div>-->
+
+        <div class="footer-box grid_6 t-grid_3">
+            {$header:footer11:static}<span itemprop="name">{$plugin:widcard:BizOrgName:notag}</span>
+        </div>
+        <div class="footer-box grid_6 t-grid_3">
+            <!-- Include Social links template -->
+            {$template:_social links}
+        </div>
+    </footer>
+</div>

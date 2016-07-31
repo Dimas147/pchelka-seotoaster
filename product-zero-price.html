@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+
+        <!-- Include header template -->
+        {$template:_header}
+
+        <!-- Container -->
+        <div id="page" class="container">
+
+            <!-- Content box -->
+            <section class="clearfix product grid_9 push_3" itemscope="" itemtype="http://schema.org/Product">
+
+                <h1 class="grid_12 product-name" role="heading" itemprop="name">{$product:name}</h1>
+
+                <article class="grid_6 t-grid_3 product-img-container">
+                    {$plugin:pagerating:stars:{$product:id}}
+                    {$product:editproduct}
+                    <a class="_lbox product-image" href="{$product:photourl:original}">
+                        <img itemprop="image" src="{$product:photourl:medium}" alt="{$product:name}"/>
+                    </a>
+                </article>
+
+                <article class="grid_6 t-grid_3" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <div class="product-description-short grid_12" itemprop="description">
+                        <p>
+                            {$product:description}
+                        </p>
+                        {$content:description}
+                    </div>
+                    <div class="grid_6 prefix_6"><a id="order-product" class="tcart-add" href="#">Order product</a></div>
+                    <p class="grid_12"><a class="btn social icon facebook icon-facebook" href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={$website:url}{$page:url}&amp;pubid=ra-51fb623c6d4f6a8a&amp;ct=1&amp;title={$page:h1}&amp;pco=tbxnj-1.0" target="_blank">Facebook</a></p>
+                </article>
+
+                <div class="tabs mt20px mb20px grid_12">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="#tabs-1">{$header:tab1:static}</a></li>
+                        <li><a href="#tabs-2">{$header:tab2:static}</a></li>
+                        <li><a href="#tabs-3">{$header:tab3:static}</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <h3>{$header:tab1:static}</h3>
+                        <p class="product-description-full" itemprop="description">{$content:fulldescription}</p>
+                    </div>
+                    <div id="tabs-2">
+                        {$plugin:pagerating:review:nocaptcha}
+                    </div>
+                    <div id="tabs-3">
+                        <h3>{$header:tab3:static}</h3>
+                        {$quote:form}
+                    </div>
+                </div>
+                <!--<article class="grid_12">{$ productlist:_products list:sametags}</article>-->
+
+            </section>
+
+            <!-- Left box -->
+            <aside class="grid_3 pull_9" role="complementary">
+                <div class="h3 primary">{$header:left_key:static}</div>
+                <!-- Main Menu -->
+                <nav id="main-menu" class="d-visible" role="navigation">
+                    {$menu:main:_main menu left}
+                </nav>
+            </aside>
+        </div>
+        <!-- Footer -->
+        <!-- Include Footer template -->
+        {$template:_footer}
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
+        <!-- Include scripts template -->
+        {$template:_scripts}
+        <script>
+            $( "#order-product" ).on( "click", function(event) {
+                event.preventDefault();
+                $( "a[href='#tabs-3']" ).trigger( "click" );
+                $('html, body').animate({
+                    scrollTop: $( "a[href='#tabs-3']" ).offset().top - 20
+                }, 500);
+            });
+        </script>
+    </body>
+</html>

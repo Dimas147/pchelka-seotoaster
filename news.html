@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
+
+<!-- Header -->
+{$template:_header}
+<!-- Container -->
+<div id="page" class="container index" role="main">
+    <h1 class="grid_12 h2 text-line" role="heading"><span>{$page:h1}</span></h1>
+    <!-- Content box -->
+    <section class="grid_8" role="main">
+        <!-- news content -->
+        {newscontent}
+        {repeat:Article blocks:key}
+        <article>
+            <div class="news-img">{$directupload:mealtime:mealtime_key:375::crop-800x375:nolink}</div>
+            <h2>{$header:content_key}</h2>
+            {$content:content_key1}
+            {$content:content_key2}
+        </article>
+        {/repeat}
+        {/newscontent}
+    </section>
+    <aside class="grid_4">
+        <section class="aside-box social-lines">
+            <div class="item">
+                <h3 class="title">{$header:social-lines_2:static}</h3>
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.7";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="500"
+                     data-height="700" data-small-header="true" data-adapt-container-width="true"
+                     data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                            href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                </div>
+            </div>
+        </section>
+    </aside>
+</div>
+<!-- Footer -->
+<!-- Include Footer template -->
+{$template:_footer}
+
+<!-- Include mobile elements template -->
+{$template:_mobile elements}
+
+<!-- Include scripts template -->
+{$template:_scripts}
+<script src="js/plugin/jquery.cycle2.min.js"></script>
+</body>
+</html>

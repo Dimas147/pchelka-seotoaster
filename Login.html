@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+        <!-- Include header template -->
+        {$template:_header}
+        <!-- Container -->
+        <div id="page" class="container">
+            <h1 class="grid_12 text-line text-center" role="heading">
+                <span>{$page:h1}</span>
+            </h1>
+            <!-- Content box -->
+            <section class="grid_6">
+                <h2 class="text-line">
+                    <span>{$header:content_1}</span>
+                </h2>
+                {$content:content_1}
+            </section>
+            <section class="grid_6">
+                <h2 class="text-line">
+                    <span>{$header:content_2}</span>
+                </h2>
+                {$content:content_2}
+            </section>
+        </div>
+        <!-- Footer -->
+        <!-- Include Footer template -->
+        {$template:_footer}
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
+        <!-- Include scripts template -->
+        {$template:_scripts}
+    </body>
+</html>

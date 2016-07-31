@@ -1,0 +1,122 @@
+.main_menu when (@menu-main) {
+    margin-bottom: 30px;
+    font-size : 0.944em;
+    position  : relative;
+    z-index   : 11;
+    & when not(@nav-bg = transparent) {
+        background : @nav-bg;
+    }
+    & when not(@nav-color = @link-color) {
+        color : @nav-color;
+    }
+
+    & > li {
+        position : relative;
+        & + li {
+            margin-top : 0.6em;
+        }
+    }
+
+    a, .category-title {
+        display         : block;
+        text-decoration : none;
+        .transition(background 0.2s);
+
+        & when not(@nav-color = @link-color) {
+            color : inherit;
+        }
+
+        &.current {
+            & when (@nav-bg-li-hover = @nav-bg-li-current) {
+                &:extend(.main_menu > li:hover);
+            }
+
+            & when not(@nav-bg-li-hover = @nav-bg-li-current) {
+                background : @nav-bg-li-current;
+            }
+            & when not(@nav-color-li-hover = @nav-color-li-current) {
+                color : @nav-color-li-current;
+            }
+        }
+    }
+    .category-title {
+        padding     : 0 1.5em;
+        font-weight : 700;
+        cursor      : pointer;
+        border      : 1px solid @brand-primary;
+        height      : 57px;
+        line-height : 52px;
+        width       : 100%;
+        .border-radius(60px);
+        &::before {
+            position : absolute;
+            right    : 0.5em;
+            top      : 0;
+            bottom   : 0;
+            margin   : auto;
+            height   : 1em;
+        }
+        span {
+            .inline-block();
+            line-height : 1.1em;
+        }
+        &:hover, &.current {
+            & when not(@nav-bg = @nav-bg-li-hover) {
+                background : @nav-bg-li-hover;
+            }
+            & when not(@nav-color = @nav-color-li-hover) {
+                color : @nav-color-li-hover;
+            }
+        }
+    }
+
+    ul {
+        font-size  : 0.82em;
+        margin-top : 0.6em;
+        display    : none;
+        background : @nav-drop-down-list-bg;
+        & when not(@nav-drop-down-list-color = @nav-color) {
+            color : @nav-drop-down-list-color;
+        }
+        //.box-shadow(0 3px 5px @gray-dark);
+
+        & when (@mobile-menu) {
+            &.open:extend(.mobile-menu ul.open) {
+            }
+        }
+
+        li {
+            float : none;
+
+            &::before {
+                margin-left : 5px;
+                line-height : 20px;
+                font-size   : 23px;
+                float       : left;
+                font-family : @font-family-icons;
+                content     : "\e0c3";
+            }
+
+            & + li {
+                padding-top : 0.6em;
+            }
+
+            &:hover {
+                a {
+                    color : @brand-primary;
+                }
+            }
+
+            a {
+
+                padding-left : 1.9em;
+                color        : @gray-darker;
+
+                &.current {
+                    color : @brand-primary;
+                }
+            }
+
+        }
+    }
+}
